@@ -30,6 +30,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt'
 
+gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+
 gem 'unirest'
 
 # Use ActiveModel has_secure_password
@@ -51,7 +53,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   
-  gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
+
   
   gem 'bootstrap-sass', '3.3.4.1'
   
