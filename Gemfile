@@ -34,6 +34,8 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
 gem 'unirest'
 
+  gem 'fullcalendar-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -57,7 +59,7 @@ group :development, :test do
   
   gem 'bootstrap-sass', '3.3.4.1'
   
-  gem 'fullcalendar-rails'
+
   
   gem 'momentjs-rails'
   
