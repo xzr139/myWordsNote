@@ -13,11 +13,9 @@ Rails.application.routes.draw do
     end
   end
 
-post "sessions/create"
-get "sessions/new"
-post "sessions/new"
-delete "sessions/destroy"
-get "sessions/destroy"
+  resources :words
+  resources :notes
+  resources :sessions, only: [:new, :create, :destroy]
   
   root :to => "notes#welcome"
   
