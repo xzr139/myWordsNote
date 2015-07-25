@@ -40,6 +40,8 @@ gem 'bootstrap-sass', '3.3.4.1'
   
 gem 'momentjs-rails'
 
+gem 'rails_12factor'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
