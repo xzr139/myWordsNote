@@ -1,0 +1,828 @@
+/* line 6, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats {
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #efeef3;
+}
+
+/* line 10, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stats-row {
+  box-shadow: inset -1px 0px 5px 2px #f9f9f9;
+  margin: 0;
+}
+
+/* line 14, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stat {
+  text-align: right;
+  padding: 25px 0px 30px 0px;
+  border-right: 1px solid #e8e9ee;
+  position: relative;
+  box-shadow: 1px 0px 0px 0px white;
+}
+
+/* line 21, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stat.last {
+  border-right: 0px;
+}
+
+/* line 24, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stat .data {
+  color: #29323a;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  padding-right: 50px;
+}
+
+/* line 31, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stat .data .number {
+  color: #32a0ee;
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+/* line 36, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#main-stats .stat .date {
+  color: #b4b8bb;
+  font-weight: lighter;
+  font-family: 'Lato', 'Open Sans';
+  font-style: italic;
+  font-size: 13px;
+  position: absolute;
+  right: 50px;
+}
+
+/* line 46, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.section {
+  border-top: 1px solid #edeff1;
+  margin-top: 30px;
+  padding-top: 45px;
+  box-shadow: inset 0px 3px 4px -1px #fafafa;
+}
+
+/* Stats chart */
+/* line 54, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#statsChart {
+  height: 250px;
+  margin-top: 35px;
+}
+
+/* specific chart styles */
+/* line 60, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.legendLabel {
+  font-size: 12px;
+  font-family: "Open Sans", Arial;
+  color: #9da3a9;
+}
+
+/* UI elements section */
+/* line 67, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements h4 {
+  margin-bottom: 35px;
+}
+
+/* line 70, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .btn-flat {
+  text-transform: uppercase;
+}
+
+/* line 73, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .btn-flat.icon {
+  text-transform: none;
+}
+
+/* line 76, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .btn-flat.icon i {
+  margin-right: 3px;
+}
+
+/* line 79, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .ui-sliders {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* line 83, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .ui-sliders .ui-slider.slider-sample2, #pad-wrapper .ui-elements .ui-sliders .ui-slider.slider-sample3 {
+  margin-top: 20px;
+}
+
+/* line 86, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .ui-group {
+  margin-top: 35px;
+}
+
+/* line 89, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .ui-group > * {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 93, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knobs {
+  overflow: auto;
+}
+
+/* line 96, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper {
+  float: left;
+}
+
+/* line 99, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper .knob {
+  box-shadow: none;
+}
+
+/* line 102, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper .info {
+  position: relative;
+  top: -20px;
+}
+
+/* line 106, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper .info .param {
+  color: #9da3a9;
+  text-align: center;
+}
+
+/* line 110, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper .info .param .line {
+  background-color: #c4cdd8;
+  height: 3px;
+  width: 25px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* line 117, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+#pad-wrapper .ui-elements .knob-wrapper .info .param .line.blue {
+  background-color: #30a1ec;
+}
+
+/* table sample below */
+/* line 122, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products {
+  width: 100%;
+}
+
+/* line 125, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .filter-block {
+  margin-bottom: 34px;
+}
+
+/* line 128, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .filter-block .ui-select {
+  margin-right: 20px;
+  top: 1px;
+  height: 24px;
+  width: 150px;
+}
+
+/* line 134, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .filter-block .search {
+  margin: 0 60px 0 0;
+}
+
+/* line 137, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .filter-block .new-product {
+  padding: 4px 14px;
+}
+
+/* line 140, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table tr.first td {
+  border-top: 0 none;
+}
+
+/* line 143, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table td.description {
+  vertical-align: middle;
+  color: #516372;
+}
+
+/* line 147, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table td a {
+  text-decoration: underline;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* line 152, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table th input[type="checkbox"] {
+  margin-top: 4px;
+}
+
+/* line 155, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table input[type="checkbox"] {
+  float: left;
+  margin-top: 11px;
+  margin-right: 23px;
+}
+
+/* line 160, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table .img {
+  height: 31px;
+  float: left;
+  background: white;
+  width: 31px;
+  border: 1px solid #dfe4eb;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 23px;
+}
+
+/* line 170, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table .img img {
+  margin-top: 4px;
+}
+
+/* line 173, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table ul.actions {
+  margin: 5px 0 0 0;
+  padding: 0;
+  float: right;
+}
+
+/* line 178, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table ul.actions li {
+  display: inline;
+  border-right: 1px solid #d0dde9;
+  padding: 5px 6px 0px 3px;
+}
+
+/* line 183, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table ul.actions li.last {
+  border: 0 none;
+}
+
+/* line 186, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table ul.actions i {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  -webkit-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+}
+
+/* line 194, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .table ul.actions i:hover {
+  opacity: 1;
+}
+
+/* line 197, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .label {
+  position: relative;
+}
+
+/* line 200, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.table-products .pagination {
+  float: right;
+  margin-top: 35px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  /* line 207, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #main-stats {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  /* line 212, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .knobs {
+    text-align: center;
+  }
+
+  /* line 215, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .knobs .knob-wrapper {
+    float: inherit;
+  }
+
+  /* line 218, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .showcase {
+    text-align: center;
+  }
+
+  /* line 221, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .table-products .table .img {
+    display: none;
+  }
+
+  /* line 224, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .table-products .table input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  /* line 227, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .table-products .table .label {
+    display: none;
+  }
+}
+@media (max-width: 979px) {
+  /* line 232, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #main-stats .stat .data {
+    padding-right: 17px;
+  }
+
+  /* line 235, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #main-stats .stat .data .number {
+    font-size: 18px;
+  }
+
+  /* line 239, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .knob-wrapper .info {
+    display: none;
+  }
+
+  /* line 243, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .pointer {
+    top: 5%;
+  }
+
+  /* line 247, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .table-products .head {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 980px) {
+  /* line 252, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .knob-wrapper + .knob-wrapper {
+    margin-left: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 257, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .showcase {
+    width: 53%;
+  }
+
+  /* line 260, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  #pad-wrapper .ui-elements .knob-wrapper + .knob-wrapper {
+    margin-left: 35px;
+  }
+}
+/* line 267, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user {
+  /* form sidebar*/
+}
+
+/* line 270, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper .with-sidebar {
+  border-right: 1px solid #edeef1;
+  box-shadow: 4px 0px 3px -1px rgba(226, 226, 226, 0.1);
+}
+
+/* line 274, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper .container {
+  width: 90%;
+  float: left;
+}
+
+/* line 278, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper .field-box {
+  margin-bottom: 25px;
+  margin-left: 0;
+  float: left;
+  width: 100%;
+}
+
+/* line 284, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper label {
+  display: inline-block;
+  float: left;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: auto;
+  width: 120px;
+}
+
+/* line 292, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input[type="text"] {
+  margin: 0;
+  padding: 3px 6px;
+  width: 75%;
+  display: inline-block;
+}
+
+/* line 298, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper .address-fields {
+  margin-left: 0px;
+  float: left;
+  width: 75%;
+}
+
+/* line 303, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper .address-fields input[type="text"]:first-child {
+  width: 100%;
+}
+
+/* line 306, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input.small {
+  width: 27%;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* line 311, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input.last {
+  margin-right: 0;
+}
+
+/* line 314, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input:-moz-placeholder {
+  font-style: italic;
+}
+
+/* line 317, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input:-ms-input-placeholder {
+  font-style: italic;
+}
+
+/* line 320, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+/* line 323, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-wrapper textarea {
+  height: 88px;
+}
+
+/* line 326, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .textarea {
+  margin-top: 27px;
+}
+
+/* line 329, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .textarea span.charactersleft {
+  color: #9ba0a5;
+  display: inline-block;
+  text-align: left;
+  margin-left: 20%;
+  margin-top: 8px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* line 338, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .actions {
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 40px;
+}
+
+/* line 343, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .actions span {
+  text-transform: uppercase;
+  color: #7e91aa;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 0 8px;
+}
+
+/* line 351, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .actions input.reset {
+  color: #7e91aa;
+  font-weight: 500;
+}
+
+/* line 355, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar .alert {
+  margin: 20px 0px 60px 0px;
+}
+
+/* line 358, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar .alert i {
+  margin-bottom: 40px;
+}
+
+/* line 361, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar h6 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* line 365, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar p {
+  color: #777e86;
+}
+
+/* line 368, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 373, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.new-user .form-sidebar ul a {
+  text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  /* line 379, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper .container {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edeef1;
+    box-shadow: 0px 4px 3px -1px rgba(226, 226, 226, 0.1);
+  }
+
+  /* line 385, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper .with-sidebar {
+    border-right: 0 none;
+    box-shadow: none;
+  }
+
+  /* line 389, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper label {
+    margin: 0;
+  }
+
+  /* line 392, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper .textarea label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  /* line 397, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper .textarea textarea {
+    width: 97%;
+  }
+
+  /* line 400, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .textarea span.charactersleft {
+    display: inline-block;
+    margin-left: 0;
+  }
+
+  /* line 404, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .actions {
+    margin-top: 0;
+  }
+
+  /* line 407, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-sidebar {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 979px) {
+  /* line 412, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper .address-fields {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  /* line 416, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .new-user .form-wrapper input.small {
+    width: inherit;
+    margin: 20px 0px 0px 0px;
+  }
+}
+/* line 422, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .header .avatar {
+  float: left;
+  margin-right: 25px;
+  border: 2px solid #e9ecee;
+  position: relative;
+  top: 3px;
+}
+
+/* line 429, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .header .name {
+  font-weight: 600;
+  margin: 20px 0 8px 0;
+  line-height: 26px;
+  margin-bottom: 10px;
+  float: none;
+}
+
+/* line 436, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .header span.area {
+  color: #7d848c;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/* line 441, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .header a.btn-flat {
+  margin-top: 18px;
+}
+
+/* line 444, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .header a.delete-user {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+/* line 448, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .profile-box {
+  border-top: 1px solid #dde2e9;
+  padding-top: 23px;
+  width: 90%;
+}
+
+/* line 453, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .section {
+  margin-bottom: 80px;
+}
+
+/* line 456, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .section.comment {
+  margin-bottom: 100px;
+  margin-top: 60px;
+}
+
+/* line 460, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio {
+  box-shadow: 4px 0px 3px -1px rgba(226, 226, 226, 0.1);
+  border-right: 1px solid #edeef1;
+}
+
+/* line 464, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio .span12 {
+  margin-left: 0;
+}
+
+/* line 467, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio h6 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* line 471, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio p {
+  color: #777e86;
+}
+
+/* line 474, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio textarea {
+  width: 97%;
+  margin-bottom: 13px;
+  height: 80px;
+}
+
+/* line 479, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio .submit-box {
+  text-align: right;
+}
+
+/* line 482, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio .submit-box input.btn-flat {
+  font-weight: 500;
+}
+
+/* line 485, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio .submit-box span {
+  text-transform: uppercase;
+  color: #7e91aa;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 2px 0 8px;
+}
+
+/* line 493, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .profile .bio .submit-box input.reset {
+  color: #7e91aa;
+  font-weight: 500;
+}
+
+/* line 497, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address h6 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+/* line 503, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address iframe {
+  width: 90%;
+  margin-bottom: 30px;
+  float: right;
+}
+
+/* line 508, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address ul {
+  padding: 0;
+  margin-left: 30px;
+  list-style: none;
+}
+
+/* line 513, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address ul li {
+  font-size: 13px;
+  line-height: 21px;
+}
+
+/* line 517, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address ul li.ico-li {
+  margin: 7px 0 7px;
+}
+
+/* line 520, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address ul i {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  margin-right: 7px;
+}
+
+/* line 526, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.user-profile .address ul i.ico-mail {
+  margin-right: 5px;
+}
+
+/* responsive */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 532, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address ul {
+    margin-left: 18px;
+  }
+
+  /* line 535, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address ul i {
+    display: none;
+  }
+
+  /* line 538, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address ul li.ico-li {
+    font-weight: bold;
+  }
+
+  /* line 541, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address ul li.ico-li a {
+    font-weight: normal;
+  }
+}
+@media (max-width: 768px) {
+  /* line 546, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .profile .bio {
+    border-right: 0 none;
+    border-bottom: 1px solid #edeef1;
+    box-shadow: 0px 4px 3px -1px rgba(226, 226, 226, 0.1);
+  }
+
+  /* line 551, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .profile .bio .span12 {
+    width: auto;
+  }
+
+  /* line 554, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .profile .profile-box {
+    width: 100%;
+  }
+
+  /* line 557, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address {
+    margin-top: 44px;
+  }
+
+  /* line 560, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address iframe {
+    width: 100%;
+  }
+
+  /* line 563, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address h6 {
+    margin-left: 0;
+  }
+
+  /* line 566, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .address ul {
+    margin: 0;
+  }
+
+  /* line 569, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .header a.btn-flat {
+    margin: 0;
+  }
+
+  /* line 572, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .header a.edit {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  /* line 577, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .header a.btn-flat {
+    margin: 0;
+  }
+
+  /* line 580, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+  .user-profile .header a.edit {
+    margin-right: 10px;
+  }
+}
+/* line 585, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.datatables-page {
+  margin-bottom: 25px;
+}
+
+/* line 589, /Users/admin/Documents/Aptana Studio 3 Workspace/save2/app/assets/stylesheets/notes.scss */
+.volume {
+  cursor: pointer;
+}
