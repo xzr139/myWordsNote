@@ -1,0 +1,64 @@
+
+<div class="content">
+	
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>
+      <div id="pad-wrapper" class="datatables-page">           
+      	<div class="row">
+      		<div class="col-md-12">
+      			<h2>Words</h2>
+      			<br><br>
+      			<table cellpadding="0" cellspacing="0" border="0" id="example">
+      				<thead>
+      					<tr role="row">
+      						<th tabindex="0" rowspan="1" colspan="1" width ="15%">Title</th>
+                            <th tabindex="0" rowspan="1" colspan="1" width ="5%">NoteID</th>
+                            <th tabindex="0" rowspan="1" colspan="1" width"25%">Jp</th>
+                            <th tabindex="0" rowspan="1" colspan="1" "23%">En</th>
+                            <th tabindex="0" rowspan="1" colspan="1" width ="5%">Action</th>
+                         </tr>
+                    </thead>
+                    <tbody>
+                    	<% @words.each do |word| %>
+                    	<tr>
+                    		<td class = "center"><%= word.title %></td>
+                            <td class = "center"><%= word.note_id%></td>
+                            <td>
+                            	<ol>
+                            		<% word.word_def.each do |data| %>
+                            		<li><%= data.jp %></li>
+                            		<% end %>
+                            	</ol>
+                            </td>
+                            <td>
+                            	<ol>
+                            		<% word.word_def.each do |data| %>
+                            		<li><%= data.en %></li>
+                                	<% end %>
+                                </ol>
+                            </td>
+                            <td>
+                            	<ul>
+                            		<li><%= link_to 'Show', word %></li>
+                            		<li class="last"><%= link_to 'Destroy', word, :method => :delete, data: { confirm: 'Are you sure?' } %></li>
+                            	</ul>
+                            </td>
+                         </tr>
+                         <% end %>
+                     </tbody>
+                 </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').dataTable({
+                "sPaginationType": "full_numbers"
+            });
+        });
+    </script>
+
+  

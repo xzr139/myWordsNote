@@ -1,0 +1,75 @@
+<div class="content">
+	
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>
+
+	<%= form_for(@word) do |f| %>
+	<div id="pad-wrapper" class="user-profile">
+		<div class="header row">
+			<div class="col-md-10">
+				<h2 class="name"><%= @title %></h2>
+				<%= f.hidden_field :title, :value => @title%>		
+			</div>
+		</div>
+        <div class="row profile">
+        	<div class="col-md-10 bio">
+
+        		<div class="profile-box">
+        			<h5>
+        				<span class="area"><%= @ipa %></span>
+        				<i class=" icon-volume-up icon-2x volume"></i>
+        				<audio controls hidden="true" id="Audio">
+        					<source src="<%= raw(@pron) %>" type="audio/mpeg">
+        				</audio>
+        				<div class="pull-right">
+        					<div class="ui-select">		
+        						<%= select_tag 'note[]', options_from_collection_for_select(@note, :id, :name) %>
+        					</div>
+        					<br><br>
+        					<div class="submit-box">
+        						<%= f.submit(:class=> "btn-flat", :value=>"+ Add this word") %>
+        					</div>
+        					<br>
+        				</div>	
+        				<%= f.hidden_field :pos, :value => @pos%>
+        				<%= f.hidden_field :ipa, :value => @ipa%>
+        				<%= f.hidden_field :pron, :value => @pron%>
+        			</h5>
+        			<br>
+        			<table class="table table-hover">
+        				<tbody>
+        					<% for num in 1..@en.length do  %>
+        					<tr>
+        						<td>
+        							<h4><%= num %>.  <%= @jp[num-1] %></h4>
+        							<h3><%= @en[num-1] %></h3>
+        							<h5>e.g. <p><%= @eg[num-1] %></p></h5> 
+        							<%= f.hidden_field :jp, :multiple => true,:value =>@jp[num-1]%>
+        							<%= f.hidden_field :en,:multiple => true, :value =>@en[num-1]%>
+        							<%= f.hidden_field :eg,:multiple => true, :value =>@eg[num-1]%>
+        						</td>    
+        					</tr>
+        					<% end %>
+        				</tbody> 
+        			</table>   
+        		</div>
+        	</div>
+        </div>  
+    </div>
+    <%end%>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+  	<% if @en[0] == nil%>
+  	alert("this word cannot be found");
+  	location.href = '/words/';
+  	<% end %>
+  	<% if @word.errors[:title][0] %>
+  	alert("<%= @word.errors[:title][0] %>");
+  	<% end %>
+  	 $(".volume").click(function(){
+		$('#Audio')[0].play();
+	});
+})
+</script>

@@ -1,0 +1,87 @@
+
+<div class="content">
+	
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>
+	
+	<div id="pad-wrapper">
+    	<div class="table-wrapper  products-table">
+    		<div class="row head">
+    			<div class="col-md-12">
+    				<h2>Notes</h2>
+    			</div>
+    		</div>
+    		<div class="row filter-block">
+    			<div class="pull-right">
+    				<a class="btn-flat success new-product" href = "../notes/new" >+ Add note</a>
+    			</div>
+    		</div>
+    		<div class="row">
+    			<table class="table table-hover">
+    				<thead>
+    					<tr>
+    						<th class="col-md-2">
+    							<input type="checkbox">
+    							Name
+    						</th>
+    						<th class="col-md-4">
+    							<span class="line"></span>
+    							Comment
+    						</th>
+    						<th class="col-md-1">
+    							<span class="line"></span>
+    							Mark
+    						</th>
+    						<th class="col-md-3">
+    							<span class="line"></span>
+    							Date
+    						</th>
+    						<th class="col-md-3">
+    							<span class="line"></span>
+    							Action
+    						</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<% @notes.each do |note| %>
+    					<tr class="first">
+    						<td>
+    							<input type="checkbox">
+    							<div class="img">
+    								<img src="/assets/note-img.png">
+    							</div>
+    							<%= link_to note.name, note %>							
+    						</td>
+    						<td class="description">
+    							<%= note.comment %>
+    						</td>
+    						<td>
+    							<%= note.mark %>
+    						</td>
+    						<td>
+    							<%= note.created_at %>
+    						</td>
+    						<td>
+    							<ul class="actions">
+    								<li><%= link_to 'Show', note %></li>
+    								<li><%= link_to 'Edit', edit_note_path(note) %></li>
+    								<li class="last"><%= link_to 'Destroy', note, :method => :delete, data: { confirm: 'Are you sure?' } %></li>
+    							</ul>
+    						</td>
+    					</tr>
+    					<% end %>
+    				</tbody>
+    			</table>
+    		</div>
+    	</div>
+    </div>
+</div>
+
+<script>
+$(function () {
+print ("fsfs);
+}
+
+	
+</script>
+

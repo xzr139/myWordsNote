@@ -1,0 +1,58 @@
+<div class="content">
+	
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>
+
+	<div id="pad-wrapper" class="user-profile">
+		<div class="header row">
+			<div class="col-md-10">
+				<h2 class="name"><%= @word.title %></h2>
+
+			</div>
+		</div>
+        <div class="row profile">
+        	<div class="col-md-10 bio">
+        		<div class="profile-box">
+        			<h5>
+        				<span class="area"><%= @word.ipa %></span>
+        				<i class=" icon-volume-up icon-2x volume"></i>
+        				<audio controls hidden="true" id="Audio">
+        					<source src="<%= raw(@word.pron) %>" type="audio/mpeg">
+        				</audio>
+        				<div class="pull-right">
+        					<br>
+        					<div class="submit-box">
+        						<a class="btn-flat success new-product" href = "../notes/<%= @word.note_id %>" >Back to note</a>
+        					</div>
+        					<br>
+        				</div>
+        			</h5>
+        			<br>
+        			<table class="table table-hover">
+        				<tbody>
+        					<%num = 0%>
+        					<% @word.word_def.each do |data| %>
+        					<% num+=1 %>
+        					<tr>
+        						<td>
+        							<h4><%= num %>.  <%= data.jp %></h4>
+        							<h3><%= data.en %></h3>
+        							<h5>e.g.  <p><%= data.eg %></p></h5> 
+        						</td>    
+        					</tr>
+        					<% end %>
+        				</tbody> 
+        			</table>   
+        		</div>
+        	</div>
+        </div>  
+    </div>
+</div>
+
+<script>
+$(function(){  
+	$(".volume").click(function(){
+		$('#Audio')[0].play();
+	});
+})
+</script>

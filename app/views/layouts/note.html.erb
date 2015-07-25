@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>My _Words_Note.html</title>
+	  
+<%= csrf_meta_tag %>
+
+	  <%= stylesheet_link_tag 'bootstrap/bootstrap' %>
+      <%= stylesheet_link_tag 'bootstrap/bootstrap-overrides' %>
+      <%= stylesheet_link_tag 'globals/elements' %>
+      <%= stylesheet_link_tag 'globals/icons' %>
+      <%= stylesheet_link_tag 'globals/layout' %>
+	  <%= stylesheet_link_tag 'lib/font-awesome' %>
+	  <%= stylesheet_link_tag 'lib/jquery-ui-1.10.2.custom' %>
+	  <%= stylesheet_link_tag 'notes' %>
+
+
+	  <link href='../../assets/lib/fullcalendar.css' rel='stylesheet' />
+	  <link href='../../assets/lib/fullcalendar.print.css' rel='stylesheet' media='print' />
+	  	  <%= stylesheet_link_tag 'lib/tables' %>
+	  <%= stylesheet_link_tag 'lib/jquery.dataTables' %>
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	  
+	  
+	  <script src="http://code.jquery.com/jquery-latest.js"></script>
+	  <%= javascript_include_tag 'notes' %>
+	  <%= javascript_include_tag 'bootstrap.min' %>
+	  <%= javascript_include_tag 'jquery-ui-1.10.2.custom.min' %>
+	  <%= javascript_include_tag 'jquery.flot' %>
+	  <%= javascript_include_tag 'jquery.flot.resize' %>	  
+	  <%= javascript_include_tag 'jquery.flot.stack' %>	  
+	  <%= javascript_include_tag 'jquery.knob' %>	  
+	  <%= javascript_include_tag 'theme' %>
+	  <%= javascript_include_tag 'fullcalendar' %>
+	  <%= javascript_include_tag 'jquery.dataTables' %> 	  
+	  <%= javascript_include_tag 'skpublishapi' %> 	
+	  
+	  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	  
+  </head>
+  <body>
+  <%= render "partials/headbar" %>
+  <%= render "partials/sidebar" %> 
+  <%= yield %>
+  </body>
+</html>

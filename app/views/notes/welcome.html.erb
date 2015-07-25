@@ -1,0 +1,45 @@
+<div class="content">
+	
+		<div id="pad-wrapper">
+    	<div class="table-wrapper  products-table">
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>  
+	<div id='calendar'></div>
+	
+	</div>
+	</div>
+
+</div>
+
+<script>
+
+	$(document).ready(function() {
+		
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month'
+			},
+			selectable: true,
+			selectHelper: true,
+			editable: true,
+			eventLimit: true,
+			events: [
+                <% @words.each do |word| %>
+                    {
+                        title: "<%= raw(word.title) %>",
+                        start: new Date("<%= raw(word.created_at) %>"),
+                        allDay: false
+                    },
+                <%end%>
+                ],
+		});
+		
+	});
+
+</script>

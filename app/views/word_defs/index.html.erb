@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Word Defs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>En</th>
+      <th>Jp</th>
+      <th>Eg</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @word_defs.each do |word_def| %>
+      <tr>
+        <td><%= word_def.title_id %></td>
+        <td><%= word_def.en %></td>
+        <td><%= word_def.jp %></td>
+        <td><%= word_def.eg %></td>
+        <td><%= link_to 'Show', word_def %></td>
+        <td><%= link_to 'Edit', edit_word_def_path(word_def) %></td>
+        <td><%= link_to 'Destroy', word_def, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Word def', new_word_def_path %>

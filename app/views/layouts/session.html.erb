@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" class="login-bg" id="login-bg">
+  <head>
+	  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	  <title>Log_in.html</title>
+	  <%= stylesheet_link_tag 'bootstrap/bootstrap' %>
+      <%= stylesheet_link_tag 'bootstrap/bootstrap-overrides' %>
+      <%= stylesheet_link_tag 'globals/elements' %>
+      <%= stylesheet_link_tag 'globals/icons' %>
+      <%= stylesheet_link_tag 'globals/layout' %>
+	  <%= stylesheet_link_tag 'lib/font-awesome' %>
+	  <%= stylesheet_link_tag 'sessions' %>
+	  
+	  <script src="http://code.jquery.com/jquery-latest.js"></script>
+	  <%= javascript_include_tag 'sessions' %>
+	  <%= javascript_include_tag 'bootstrap.min' %>
+	  <%= javascript_include_tag 'theme' %>
+	  
+	    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+  
+  </head>
+  <body>
+  <%= render "partials/bgswitch" %>
+  <%= yield %>
+  </body>
+</html>

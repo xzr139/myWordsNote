@@ -1,0 +1,77 @@
+<div class="content">
+	
+	<%= render "partials/bgstransfer" %>
+	<%= render "partials/bgsnav"%>
+	
+       <div id="pad-wrapper" class="user-profile">
+            <div class="header row">
+                <div class="col-md-10">
+                    <h3 class="name"><%= @note.name %></h3>
+                    <span class="area">mark: <%= @note.mark %></span>
+                </div>
+            </div>
+            <div class="row profile">
+                <div class="col-md-10 bio">
+                    <div class="profile-box">
+                    	<h6>
+                    		<span style="word-break:break-all" class="area"><h4>Comment</h4><br><%= @note.comment %></span>
+                    	</h6>
+                    	<div class="row filter-block">
+                    		<div class="pull-right">
+                    			<a class="btn-flat new-product" href = "../notes/<%= @note.id %>/edit" >Edit notes</a>
+                    		</div>
+                    	</div>
+                    	<br>
+                        <div class="col-md-15">
+                        	<table class="table table-hover">
+                        		<thead>
+                        			<tr>
+                        				<th class="col-md-1">
+                        					Word
+                        				</th>
+                        				<th class="col-md-1">
+                        					<span class="line"></span>
+                        					pos
+                        				</th>
+                        				<th class="col-md-6">
+                        					<span class="line"></span>
+                        					Meaning
+                        				</th>
+                        				<th class="col-md-2">
+                        					<span class="line"></span>
+                        					Voice
+                        				</th>
+                        			</tr>
+                        		</thead>
+                        		<tbody>
+                        			<% @note.word.each do |word| %>
+                        			<tr class="first">
+                        				<td>
+                        					<%= word.title%>
+                        				</td>
+                        				<td>
+                        					<%= word.pos%>
+                        				</td>
+                        				<td>
+                        					<ol>
+                        						<% word.word_def.each do |data| %>
+                        						<li><%= data.en %></li>
+                        					<% end %>
+                        					</ol>
+                        				</td>
+                        				<td>
+                        					<ul class="actions">
+                        						<li><%= link_to 'Show', word %></li>
+                        						<li class="last"><%= link_to 'Destroy', word, :method => :delete, data: { confirm: 'Are you sure?' } %></li>
+                        					</ul>
+                        				</td>
+                        			</tr>
+                        			<% end %>
+                        		</tbody>
+                        	</table>
+                        </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

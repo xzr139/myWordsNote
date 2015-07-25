@@ -1,0 +1,41 @@
+<header class="navbar navbar-inverse" role="banner">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="../">MY WORDS NOTE</a>
+    </div>
+    <ul class="nav navbar-nav pull-right hidden-xs">
+    	<li class="hidden-xs hidden-sm">
+            <input class="search" type="text" placeholder="please input the word" id="tags"/>
+        </li>
+    </ul>
+</header>
+
+  <script>
+  $(function() {
+    $("#tags").autocomplete ({  
+    	source: function(request,response){  
+    		var term = request.term
+    		$.ajax({
+    			url: '/words/search_suggest',
+    			data: {search:term},
+    			type: "POST",
+    			datatype: "json",
+    			success: function(data) {
+    				
+    				response(data);
+    			}
+    		})
+    	},
+    	select: function( event, ui ) {
+    		location.href = '/words/search?word=' + ui.item.value
+    	}
+    });  
+    $('#tags').bind('keypress',function(event){
+    	if(event.keyCode == "13")    
+    	{
+    		location.href = '/words/search?word='+$('#tags').val();
+    	}
+    });
+   })
+ </script>
+
+    		

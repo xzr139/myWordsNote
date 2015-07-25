@@ -1,0 +1,32 @@
+<div class="bg-switch visible-desktop">
+	<div class="bgs">
+		<a href="#" data-img="1.jpg" class="bg" theme-id='1' id='t-1'>
+			<img src="/assets/bgs/1.jpg" />
+		</a>
+        <a href="#" data-img="2.jpg" class="bg" theme-id='2' id='t-2'>
+        	<img src="/assets/bgs/2.jpg" />
+        </a>            
+        <a href="#" data-img="3.jpg" class="bg" theme-id='3' id='t-3'>
+            <img src="/assets/bgs/3.jpg" />
+        </a>
+        <a href="#" data-img="4.jpg" class="bg" theme-id='4' id='t-4'>
+            <img src="/assets/bgs/4.jpg" />
+        </a>
+        <a href="#" data-img="5.jpg" class="bg" theme-id='5' id='t-5'>
+            <img src="/assets/bgs/5.jpg" />
+        </a>
+        <a href="#" data-img="6.jpg" class="bg" theme-id='6' id='t-6'>
+            <img src="/assets/bgs/6.jpg" />
+        </a>
+        <a href="#" data-img="7.jpg" class="bg" theme-id='7' id='t-7'>
+            <img src="/assets/bgs/7.jpg" />
+        </a>
+    </div>
+</div>
+
+<script>
+	$(function () {
+	document.getElementById("t-<%= cookies[:ThemeID]%>").className = 'bg active';
+	document.getElementById("login-bg").style.background = "url(../assets/bgs/<%= cookies[:ThemeID]%>.jpg)";
+    });
+</script>

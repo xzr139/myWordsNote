@@ -1,0 +1,37 @@
+	<div class="skins-nav">
+		<a href="#" class="skin second_nav" id="i-1">
+		    <span class="icon"></span>
+		    <span class="text">skin 1</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/2.css" theme-id='2' id="i-2">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 2</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/3.css" theme-id='3' id="i-3">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 3</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/4.css" theme-id='4' id="i-4">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 4</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/5.css" theme-id='5' id="i-5">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 5</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/6.css" theme-id='6' id="i-6">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 6</span>
+        </a>
+        <a href="#" class="skin second_nav" data-file="../../assets/lib/skins/7.css" theme-id='7' id="i-7">
+    	    <span class="icon"></span>
+    	    <span class="text">skin 7</span>
+        </a>
+    </div>
+    
+
+<script>
+	$(function () {
+	document.getElementById("i-<%= cookies[:ThemeID]%>").className = 'skin second_nav selected';
+    });
+</script>
