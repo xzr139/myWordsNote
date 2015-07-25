@@ -34,7 +34,11 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 
 gem 'unirest'
 
-  gem 'fullcalendar-rails'
+gem 'fullcalendar-rails'
+
+gem 'bootstrap-sass', '3.3.4.1'
+  
+gem 'momentjs-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -54,14 +58,6 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
-
-  
-  gem 'bootstrap-sass', '3.3.4.1'
-  
-
-  
-  gem 'momentjs-rails'
   
 end
 
