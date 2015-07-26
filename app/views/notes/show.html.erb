@@ -31,7 +31,7 @@
                         				</th>
                         				<th class="col-md-1">
                         					<span class="line"></span>
-                        					pos
+                        					Pos
                         				</th>
                         				<th class="col-md-6">
                         					<span class="line"></span>
@@ -50,13 +50,17 @@
                         					<%= word.title%>
                         				</td>
                         				<td>
-                        					<%= word.pos%>
+                        					<ol>
+                        						<% word.word_def.each do |data| %>
+                        						<li><%= data.jp %></li>
+                        						<% end %>
+                        					</ol>
                         				</td>
                         				<td>
                         					<ol>
                         						<% word.word_def.each do |data| %>
                         						<li><%= data.en %></li>
-                        					<% end %>
+                        						<% end %>
                         					</ol>
                         				</td>
                         				<td>
