@@ -5,7 +5,7 @@
 			<%= form_for @user, :url => sessions_path do |f| %>
 			
 			<% if @user.errors.any? %>
-				<%= f.text_field :name , :class => "form-control",  :placeholder => @user.errors[:name][0]%>
+				<%= f.text_field :name , :class => "form-control", :value => '', :placeholder => @user.errors[:name][0]%>
 			<%else%>
 			    <%= f.text_field :name , :class => "form-control",  :placeholder => "name"%>
 			<% end %>

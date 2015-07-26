@@ -35,6 +35,11 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
+    if @note.name == ""
+      @note.errors.add "name","the name cannot be empty"
+      render :action => 'new'
+      return
+    end
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
@@ -49,6 +54,12 @@ class NotesController < ApplicationController
   # PATCH/PUT /notes/1
   # PATCH/PUT /notes/1.json
   def update
+    
+    if note_params[:name] == ""
+      @note.errors.add "name","the name cannot be empty"
+      render :edit
+      return
+    end
     respond_to do |format|
       if @note.update(note_params)
         format.html { redirect_to @note, notice: 'Note was successfully updated.' }

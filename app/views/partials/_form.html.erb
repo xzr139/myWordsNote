@@ -4,7 +4,7 @@
         			<%= form_for(@note, :html => {:class => "new_user_form"})  do |f| %>
         			<div class="col-md-12 field-box">
         				<label>Name:</label>
-        				<%= f.text_field :name, :class => "form-control",:placeholder => @note.errors[:name][0]?@note.errors[:name][0]:"" %>
+        				<%= f.text_field :name, :class => "form-control",:placeholder => @note.errors[:name][0]?@note.errors[:name][0]:"", :value =>  @note.errors[:name][0]?"":@note.name %>
                     </div>
                     <div class="col-md-12 field-box">
                     	<%= f.label :mark %>
