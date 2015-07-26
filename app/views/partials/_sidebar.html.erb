@@ -1,26 +1,26 @@
 <div id="sidebar-nav">
 	<ul id="dashboard-menu">
-		<li class="active">
+		<li id='home' >
             <a href="/">
                 <i class="icon-home"></i>
                 <span>Home</span>
             </a>
          </li>            
-         <li>
+         <li id='note'>
          	<a href="/notes">
          		<i class="icon-book"></i>
                 <span>My Notes</span>
             </a>
         </li>
-        <li>
+        <li   id='word' >
          	<a href="/words">
-         		<i class="icon-edit"></i>
+         		<i  id='word'  class="icon-edit"></i>
                 <span>My Words</span>
             </a>
         </li>
-        <li>
+        <li  id='about' >
          	<a href="/notes/about">
-         		<i class="icon-group"></i>
+         		<i  id='about'  class="icon-group"></i>
          		<span>About</span>
          	</a>
          </li>
@@ -32,3 +32,26 @@
         </li>
     </ul>
 </div>
+
+<script>
+	$(function () {
+		t = window.location.pathname.substr(1,5);
+		if (t == "words"){
+			$('#word').addClass("active");
+		}
+		else{
+			t = window.location.pathname.substr(1,12);
+			if (t == "notes/about"){
+				$('#about').addClass("active");
+			}
+			else{
+				if (t == "notes" ){
+					$('#note').addClass("active");
+				}
+				else{
+					$('#home').addClass("active");
+				}
+			}
+		}
+	});
+</script>

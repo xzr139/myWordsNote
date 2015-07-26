@@ -32,6 +32,7 @@ class WordsController < ApplicationController
   # POST /words
   # POST /words.json
   def create
+    
     flag = true  
     t = params[:note]
     @word = Word.new(:title => params[:word][:title], :pos =>params[:word][:pos], :pron => params[:word][:pron], :ipa => params[:word][:ipa], :note_id => params[:note][0] )
@@ -88,8 +89,15 @@ class WordsController < ApplicationController
   
   def search
     
-    @word = Word.new
     @note = Note.all
+    
+    @word = Word.find_by_title(params[:word])
+     if @word != nil
+       redirect_to @word
+     else
+       @word = Word.new  
+     end
+    
     baseUrl= "http://www.dictionaryapi.com/api/v1/references/sd4/xml/"+params[:word]+"?key=7b6540c6-117a-4264-8c39-070748265b39";
     uri = URI.parse(baseUrl);
     userAgent = Net::HTTP.new(uri.host, uri.port);
@@ -109,9 +117,9 @@ class WordsController < ApplicationController
         if i == 3
           break;
         end
-        if !entry.elements['def/dt'] 
+        if entry.elements['def/dt'].text.to_s == ' ' or entry.elements['def/dt'].text.to_s == ':'
           next;
-        end      
+        end    
         
         p = entry.elements['def/dt'].text.to_s.gsub!(/:/,'')
         if p == nil
@@ -142,6 +150,8 @@ class WordsController < ApplicationController
      @ipa = doc.elements['entry_list/entry/pr'].text
      @pron = "http://media.merriam-webster.com/soundc11/"+params[:word][0]+'/'+doc.elements['entry_list/entry/sound/wav'].text
      @pos = doc.elements['entry_list/entry/fl'].text
+
+     
 end
   
   def search_suggest
